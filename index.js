@@ -1,16 +1,10 @@
 console.log("cat")
 
 const d = require('./data.json')
+const shuffleArr = require('./shuffle')
 
 
-
-const sorted = d.wait.sort(function(a,b) {
-    if (Math.random() > 0.5) {
-        return -1
-    } else {
-        return 1
-    }
-})
+const sorted = shuffleArr(d.wait)
 
 
 console.log(sorted)
